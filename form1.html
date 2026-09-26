@@ -4,68 +4,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkout Form Clone</title>
 </head>
 
 <body>
-    <h1>회원가입</h1>
-    <form action="test1.html" method="post">
-        <label for="username">이름: </label><br>
-        <input type="text" name="username" id="username" required> 
-        <br>
-        <label for="email">이메일: </label><br>
-        <input type="text" name="email" id="email" required> 
-        <br>
-        <label for="password">비밀번호: </label><br>
-        <input type="password" name="password" id="password" required> 
-        <br>
-        <label for="birthday">생년월일: </label><br>
-        <input type="date" name="birthday" id="birthday"> 
-        <br>
-        성별: <br>
-        <input type="radio" name="gender" id="gender1" value="M" checked>남
-        <input type="radio" name="gender" id="gender2" value="W" >여 
-        <br>
-        취미: <br>
-        <input type="checkbox" name="hobby" id="hobby1" value="1"> 독서
-        <input type="checkbox" name="hobby" id="hobby2" value="2"> 운동
-        <input type="checkbox" name="hobby" id="hobby3" value="3"> 게임
-        <input type="checkbox" name="hobby" id="hobby4" value="4"> 수면
-        <br>
-        <label for="hometown">고향: </label>
-        <select id="hometown" name="hometown">
-            <option value="강원도">강원도</option>
-            <option value="경기도">경기도</option>
-            <option value="경상도">경상도</option>
-            <option value="광주">광주</option>
-            <option value="대구">대구</option>
-            <option value="대전">대전</option>
-            <option value="부산">부산</option>
-            <option value="서울">서울</option>
-            <option value="울산">울산</option>
-            <option value="인천">인천</option>
-            <option value="전라도">전라도</option>
-            <option value="제주도">제주도</option>
-            <option value="충청도">충청도</option>
-        </select>
-        <br>
-        <label for="favcolor">좋아하는 색상: </label><br>
-        <input type="color" name="favcolor" id="favcolor">
-        <br>
-        <label for="job">관심 분야: </label><br>
-        <input list="jobList" name="job" id="job">
-        <datalist id="jobList">
-            <option value="Web">
-            <option value="AI">
-            <option value="Data">
-        </datalist>
-        <br>
-        <label for="introduce">자기소개: </label><br>
-        <textarea name='introduce' id="introduce" cols=40 rows=5></textarea><br>
-        <input type="submit" value="가입하기">
-        <input type="reset" value="다시입력">
-    </form>
+    <main>
+        <h1>Checkout Form</h1>
 
+        <h4>
+            Your cart
+        </h4>
+
+        <ul>
+          <li>
+            <div>
+              <h6>Product name</h6>
+            </div>
+            <span>$12</span>
+          </li>
+          <li>
+            <div>
+              <h6>Second product</h6>
+              
+            </div>
+            <span>$8</span>
+          </li>
+          <li>
+            <div>
+              <h6>Third item</h6>
+            </div>
+            <span>$5</span>
+          </li>
+          <li>
+            <div>
+              <h6>Promo code</h6>
+            </div>
+            <span>−$5</span>
+          </li>
+          <li>
+            <span>Total (USD)</span>
+            <strong>$20</strong>
+          </li>
+        </ul>
+
+        <form action="test1.html" method="post">
+            <legend>Billing address</legend><br>
+            <div>
+                <label for="firstName">First name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div>
+                <label for="lastName">Last name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div>
+                <label for="username">User name: </label><br>
+                <input type="text" name="Username" id="username" required>
+            </div>
+
+            <div>
+                <label for="email">Email: </label><br>
+                <input type="text" name="email" id="email">
+            </div>
+
+            <div>
+                <label for="address1">Address: </label><br>
+                <input type="password" name="address1" id="address1" required>
+            </div>
+
+            <div>
+                <label for="address2">Address 2: </label><br>
+                <input type="password" name="address2" id="address2" required>
+            </div>
+
+            <div>
+                <label for="country">Country: </label>
+                <select id="country" name="country">
+                    <option value="">Choose...</option>
+                    <option>Korea</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="state">State: </label>
+                <select id="state" name="state">
+                    <option value="">Choose...</option>
+                    <option>강원도</option>
+                    <option>경기도</option>
+                    <option>경상도</option>
+                    <option>광주</option>
+                    <option>대구</option>
+                    <option>대전</option>
+                    <option>부산</option>
+                    <option>서울</option>
+                    <option>울산</option>
+                    <option>인천</option>
+                    <option>전라도</option>
+                    <option>제주도</option>
+                    <option>충청도</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="zip">Zip</label>
+                <input type="text" class="zip" id="zip" required>
+            </div>
+
+            <div>
+                <input type="checkbox" name="checkbox1" id="checkbox1">
+                <label for="checkbox1">
+                    Shipping address is the same as my billing address
+                </label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="checkbox2" id="checkbox2">
+                <label for="checkbox1">
+                    Save this information for next time
+                </label>
+            </div>
+            <hr>
+            <h4>Payment</h4>
+            <div>
+                <input id="credit" name="payment" type="radio" required>
+                <label for="credit">Credit card</label>
+            </div>
+            <div>
+                <input id="debit" name="payment" type="radio" required>
+                <label for="debit">Debit card</label>
+            </div>
+            <div>
+                <input id="paypal" name="payment" type="radio" required>
+                <label for="paypal">PayPal</label>
+            </div>
+
+            <div>
+                <label for="cardname">Name on card</label>
+                <input type="text" name="cardname" id="cardname" required>
+            </div>
+
+            <div>
+                <label for="cardnumber">Creadit card number</label>
+                <input type="text" name="cardnumber" id="cardnumber" required>
+            </div>
+
+            <div>
+                <label for="expiration">Expiration</label>
+                <input type="text" name="expiration" id="expiration" required>
+            </div>
+
+            <div>
+                <label for="CVV">CVV</label>
+                <input type="text" name="CVV" id="CVV" required>
+            </div>
+            <hr>
+
+            <button type="submit">Continue to checkout</button>
+
+        </form>
+    </main>
+    <footer>
+        <p>© 2017–2022 Company Name</p>
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>
