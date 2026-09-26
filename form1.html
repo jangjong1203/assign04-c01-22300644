@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,44 +7,55 @@
 </head>
 
 <body>
+    <a href="https://getbootstrap.com/docs/5.2/examples/checkout/">원본</a>
+
+
     <main>
         <h1>Checkout Form</h1>
+        <div>
+            <h4>
+                Your cart
+            </h4>
 
-        <h4>
-            Your cart
-        </h4>
+            <ul>
+                <li>
+                    <div>
+                        <h6>Product name</h6>
+                    </div>
+                    <span>$12</span>
+                </li>
+                <li>
+                    <div>
+                        <h6>Second product</h6>
 
-        <ul>
-          <li>
+                    </div>
+                    <span>$8</span>
+                </li>
+                <li>
+                    <div>
+                        <h6>Third item</h6>
+                    </div>
+                    <span>$5</span>
+                </li>
+                <li>
+                    <div>
+                        <h6>Promo code</h6>
+                    </div>
+                    <span>−$5</span>
+                </li>
+                <li>
+                    <span>Total (USD)</span>
+                    <strong>$20</strong>
+                </li>
+            </ul>
+        </div>
+
+        <form>
             <div>
-              <h6>Product name</h6>
+                <input type="text" placeholder="Promo code">
+                <button type="submit">Redeem</button>
             </div>
-            <span>$12</span>
-          </li>
-          <li>
-            <div>
-              <h6>Second product</h6>
-              
-            </div>
-            <span>$8</span>
-          </li>
-          <li>
-            <div>
-              <h6>Third item</h6>
-            </div>
-            <span>$5</span>
-          </li>
-          <li>
-            <div>
-              <h6>Promo code</h6>
-            </div>
-            <span>−$5</span>
-          </li>
-          <li>
-            <span>Total (USD)</span>
-            <strong>$20</strong>
-          </li>
-        </ul>
+        </form>
 
         <form action="test1.html" method="post">
             <legend>Billing address</legend><br>
@@ -120,7 +130,7 @@
 
             <div>
                 <input type="checkbox" name="checkbox2" id="checkbox2">
-                <label for="checkbox1">
+                <label for="checkbox2">
                     Save this information for next time
                 </label>
             </div>
