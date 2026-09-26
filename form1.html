@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>회원가입</h1>
+    <form action="test1.html" method="post">
+        <label for="username">이름: </label><br>
+        <input type="text" name="username" id="username" required> 
+        <br>
+        <label for="email">이메일: </label><br>
+        <input type="text" name="email" id="email" required> 
+        <br>
+        <label for="password">비밀번호: </label><br>
+        <input type="password" name="password" id="password" required> 
+        <br>
+        <label for="birthday">생년월일: </label><br>
+        <input type="date" name="birthday" id="birthday"> 
+        <br>
+        성별: <br>
+        <input type="radio" name="gender" id="gender1" value="M" checked>남
+        <input type="radio" name="gender" id="gender2" value="W" >여 
+        <br>
+        취미: <br>
+        <input type="checkbox" name="hobby" id="hobby1" value="1"> 독서
+        <input type="checkbox" name="hobby" id="hobby2" value="2"> 운동
+        <input type="checkbox" name="hobby" id="hobby3" value="3"> 게임
+        <input type="checkbox" name="hobby" id="hobby4" value="4"> 수면
+        <br>
+        <label for="hometown">고향: </label>
+        <select id="hometown" name="hometown">
+            <option value="강원도">강원도</option>
+            <option value="경기도">경기도</option>
+            <option value="경상도">경상도</option>
+            <option value="광주">광주</option>
+            <option value="대구">대구</option>
+            <option value="대전">대전</option>
+            <option value="부산">부산</option>
+            <option value="서울">서울</option>
+            <option value="울산">울산</option>
+            <option value="인천">인천</option>
+            <option value="전라도">전라도</option>
+            <option value="제주도">제주도</option>
+            <option value="충청도">충청도</option>
+        </select>
+        <br>
+        <label for="favcolor">좋아하는 색상: </label><br>
+        <input type="color" name="favcolor" id="favcolor">
+        <br>
+        <label for="job">관심 분야: </label><br>
+        <input list="jobList" name="job" id="job">
+        <datalist id="jobList">
+            <option value="Web">
+            <option value="AI">
+            <option value="Data">
+        </datalist>
+        <br>
+        <label for="introduce">자기소개: </label><br>
+        <textarea name='introduce' id="introduce" cols=40 rows=5></textarea><br>
+        <input type="submit" value="가입하기">
+        <input type="reset" value="다시입력">
+    </form>
+
+</body>
+
+</html>
