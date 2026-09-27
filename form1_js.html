@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        main {
+            width: 100%;
+            max-width: 800px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        li:last-child {
+            border-bottom: none;
+            background-color: #f8f9fa;
+        }
+        h4, h6 {
+            margin: 0;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type=text], 
+        input[type=email], 
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=text]:focus, 
+        input[type=email]:focus, 
+        select:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        input[type=radio], 
+        input[type=checkbox] {
+            margin-right: 8px;
+        }
+
+        button[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #777;
+        }
+
+        footer ul {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            border: none;
+        }
+
+        footer li {
+            border: none;
+            padding: 0;
+        }
+        
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        #redeem{
+            display: block; 
+            margin: 0 auto;
+            gap: 10px;
+            height: 50%;
+            width:100px
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://getbootstrap.com/docs/5.2/examples/checkout/">원본</a>
+
+
+    <main>
+        <h1>Checkout Form</h1>
+        <div>
+            <h4>
+                Your cart
+            </h4>
+
+            <ul>
+                <li>
+                    <div>
+                        <h6>Product name</h6>
+                    </div>
+                    <span>$12</span>
+                </li>
+                <li>
+                    <div>
+                        <h6>Second product</h6>
+
+                    </div>
+                    <span>$8</span>
+                </li>
+                <li>
+                    <div>
+                        <h6>Third item</h6>
+                    </div>
+                    <span>$5</span>
+                </li>
+                <li>
+                    <div>
+                        <h6>Promo code</h6>
+                    </div>
+                    <span>−$5</span>
+                </li>
+                <li>
+                    <span>Total (USD)</span>
+                    <strong>$20</strong>
+                </li>
+            </ul>
+        </div>
+
+        <form>
+            <div>
+                <input type="text" placeholder="Promo code">
+                <button type="submit" id="redeem">Redeem</button>
+            </div>
+        </form>
+
+        <form action="test1.html" method="post" id="checkoutForm" novalidate>
+            <legend>Billing address</legend><br>
+            <div>
+                <label for="firstName">First name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div>
+                <label for="lastName">Last name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div>
+                <label for="username">User name: </label><br>
+                <input type="text" name="Username" id="username" minlength="6" required>
+            </div>
+
+            <div>
+                <label for="email">Email: </label><br>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div>
+                <label for="address1">Address: </label><br>
+                <input type="text" name="address1" id="address1" required>
+            </div>
+
+            <div>
+                <label for="address2">Address 2: </label><br>
+                <input type="text" name="address2" id="address2" required>
+            </div>
+
+            <div>
+                <label for="country">Country: </label>
+                <select id="country" name="country">
+                    <option value="">Choose...</option>
+                    <option>Korea</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="state">State: </label>
+                <select id="state" name="state">
+                    <option value="">Choose...</option>
+                    <option>강원도</option>
+                    <option>경기도</option>
+                    <option>경상도</option>
+                    <option>광주</option>
+                    <option>대구</option>
+                    <option>대전</option>
+                    <option>부산</option>
+                    <option>서울</option>
+                    <option>울산</option>
+                    <option>인천</option>
+                    <option>전라도</option>
+                    <option>제주도</option>
+                    <option>충청도</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="zip">Zip</label>
+                <input type="text" class="zip" id="zip" required>
+            </div>
+
+            <div>
+                <input type="checkbox" name="checkbox1" id="checkbox1">
+                <label for="checkbox1">
+                    Shipping address is the same as my billing address
+                </label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="checkbox2" id="checkbox2">
+                <label for="checkbox2">
+                    Save this information for next time
+                </label>
+            </div>
+            <hr>
+            <h4>Payment</h4>
+            <div>
+                <input id="credit" name="payment" type="radio" required>
+                <label for="credit">Credit card</label>
+            </div>
+            <div>
+                <input id="debit" name="payment" type="radio" required>
+                <label for="debit">Debit card</label>
+            </div>
+            <div>
+                <input id="paypal" name="payment" type="radio" required>
+                <label for="paypal">PayPal</label>
+            </div>
+
+            <div>
+                <label for="cardname">Name on card</label>
+                <input type="text" name="cardname" id="cardname" required>
+            </div>
+
+            <div>
+                <label for="cardnumber">Creadit card number</label>
+                <input type="text" name="cardnumber" id="cardnumber" required>
+            </div>
+
+            <div>
+                <label for="expiration">Expiration</label>
+                <input type="text" name="expiration" id="expiration" required>
+            </div>
+
+            <div>
+                <label for="CVV">CVV</label>
+                <input type="text" name="CVV" id="CVV" required>
+            </div>
+            <hr>
+
+            <button type="submit">Continue to checkout</button>
+
+        </form>
+    </main>
+    <footer>
+        <p>© 2017–2022 Company Name</p>
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        const form = document.querySelector("#checkoutForm");
+        
+        form.addEventListener("submit", function (event) {
+            const email = document.querySelector("#email");
+            const username = document.querySelector("#username");
+
+            if (!email.checkValidity()) {
+                event.preventDefault();
+                alert("유효한 이메일을 입력하세요.");
+                email.focus();
+                return;
+            }
+            if (!username.checkValidity()) {
+                event.preventDefault();
+                alert("사용자명(Username)은 최소 6자 이상 입력해야 합니다.");
+                username.focus();
+                return;
+            }
+
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                alert("필수 항목을 모두 입력해주세요.");
+                return;
+            }
+
+            event.preventDefault(); 
+            alert("등록이 완료되었습니다.");
+        });
+    </script>
+</body>
+
+</html>
